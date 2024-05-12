@@ -1,38 +1,296 @@
-.App {
-  text-align: center;
-}
+@keyframes scroll {
+  0% {
+    height: 0;
+  }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  100% {
+    height: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+@keyframes blink {
+  to {
+    opacity: .0;
+  }
+}
+
+@keyframes scan {
+  from {
+    top: 0
+  }
+
+  to {
+    top: 100%
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.15795
+  }
+
+  5% {
+    opacity: 0.31511
+  }
+
+  10% {
+    opacity: 0.94554
+  }
+
+  15% {
+    opacity: 0.2469
+  }
+
+  20% {
+    opacity: 0.62031
+  }
+
+  25% {
+    opacity: 0.0293
+  }
+
+  30% {
+    opacity: 0.00899
+  }
+
+  35% {
+    opacity: 0.5344
+  }
+
+  40% {
+    opacity: 0.12778
+  }
+
+  45% {
+    opacity: 0.52042
+  }
+
+  50% {
+    opacity: 0.3823
+  }
+
+  55% {
+    opacity: 0.2198
+  }
+
+  60% {
+    opacity: 0.9383
+  }
+
+  65% {
+    opacity: 0.86615
+  }
+
+  70% {
+    opacity: 0.68695
+  }
+
+  75% {
+    opacity: 0.55749
+  }
+
+  80% {
+    opacity: 0.96984
+  }
+
+  85% {
+    opacity: 0.0361
+  }
+
+  90% {
+    opacity: 0.24467
+  }
+
+  95% {
+    opacity: 0.08351
+  }
+
+  100% {
+    opacity: 0.54813
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #383838;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00dd00;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00dd00d1;
+}
+
+html,
+body,
+#app,
+#app>div {
+  min-height: 100%
+}
+
+body * {
+  margin: 0;
+}
+
+.App {
+  position: relative;
   min-height: 100vh;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+  overflow-x: hidden;
+  background-color: #383838;
+  color: #00dd00;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 4rem;
+  max-width: 1024px;
+  width: 100%;
+  position: absolute;
+  animation: scroll 3s 1;
+  overflow: hidden;
+  padding: 0 40px 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.overlay {
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.overlay:before {
+  background: linear-gradient(#101010 50%, rgba(16, 16, 16, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.03));
+  background-size: 100% 3px, 6px 100%;
+  content: "";
+  display: block;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.overlay:after {
+  animation: flicker 0.30s infinite;
+  background: rgba(16, 16, 16, 0.2);
+  content: "";
+  display: block;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.scan {
+  animation: scroll 10s infinite;
+  background: -moz-linear-gradient(top, rgba(0, 221, 0, 0) 0%, rgba(0, 221, 0, 1) 50%, rgba(0, 221, 0, 0) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 221, 0, 0) 0%, rgba(0, 221, 0, 1) 50%, rgba(0, 221, 0, 0) 100%);
+  background: linear-gradient(to bottom, rgba(0, 221, 0, 0) 0%, rgba(0, 221, 0, 1) 50%, rgba(0, 221, 0, 0) 100%);
+  pointer-events: none;
+  display: block;
+  height: 20px;
+  opacity: 0.05;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -5%;
+  z-index: 5;
+}
+
+.header {
+  align-self: center;
+  text-align: center;
+  width: fit-content;
+}
+
+.logo {
+  font-family: "VT323", monospace;
+  user-select: none;
+  font-size: 40px;
+}
+
+.title {
+  font-size: 80px;
+}
+
+.title b {
+  color: #fff;
+}
+
+.contactsBlock {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.contactsBlock a {
+  color: #00dd00;
+  width: fit-content;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.contactsBlock a:hover {
+  color: #fff;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  gap: 12px;
+}
+
+.contactForm label {
+  font-size: 30px;
+}
+
+.input {
+  position: relative;
+  cursor: pointer;
+  font-family: "VT323", monospace;
+  z-index: 10;
+  padding: 8px 8px 0 5px;
+  color: #00dd00;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #00dd00;
+  font-size: 30px;
+  width: 100%;
+}
+
+.input:focus-visible {
+  outline: none;
+}
+
+@media screen and (max-width: 1250px) {
+  .logo {
+    font-size: 30px;
   }
 }
