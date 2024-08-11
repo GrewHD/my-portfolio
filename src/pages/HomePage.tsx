@@ -30,21 +30,21 @@ const ContactUs = () => {
 
     return (
         <form ref={form} onSubmit={sendEmail} className='contactForm'>
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:gap-0">
                 <label htmlFor='name'>Name: </label>
-                <input id='name' name='name' className='input' />
+                <input id='name' name='name' className='input max-sm:h-[40px]' />
             </div>
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:gap-0">
                 <label htmlFor='email'>Email: </label>
-                <input required id='email' name='email' className='input' />
+                <input required id='email' name='email' className='input max-sm:h-[40px]' />
             </div>
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:gap-0">
                 <label htmlFor='subject'>Subject: </label>
-                <input id='subject' name='subject' className='input' />
+                <input id='subject' name='subject' className='input max-sm:h-[40px]' />
             </div>
-            <div className="flex items-start gap-8">
+            <div className="flex items-start gap-8 max-sm:flex-col max-sm:items-start max-sm:gap-0">
                 <label htmlFor='message'>Message: </label>
-                <textarea required id='message' name='message' className='input h-[55px] overflow-hidden' />
+                <textarea required id='message' name='message' className='input h-[55px] max-sm:h-auto overflow-hidden' />
             </div>
             <div className="flex justify-between gap-8 mt-5 max-sm:flex-col max-sm:gap-4">
                 <button className="border-2 text-3xl border-[#00dd00] py-[10px] px-[100px] pointer hover:bg-[#00dd00] hover:text-white" type="submit">SUBMIT</button>
