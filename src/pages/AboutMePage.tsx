@@ -1,8 +1,8 @@
 export default function AboutMePage() {
     return (
-        <div className='content'>
+        <div className='content mt-16'>
             <div className="max-w-[250px]">
-                <img src="./portrait.png" />
+                <img alt="My picture" src="./portrait.png" />
             </div>
 
             <div className="text-3xl">

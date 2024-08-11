@@ -2,7 +2,6 @@ import { TypeAnimation } from "react-type-animation"
 
 import emailjs from '@emailjs/browser';
 import { FormEvent, useRef } from "react";
-import { Link } from "react-router-dom";
 
 const ContactUs = () => {
     const form = useRef<HTMLFormElement>(null);
@@ -79,9 +78,9 @@ export default function HomePage() {
                     </h4>
                 </div>
             </header>
-            <nav className="flex gap-6 text-3xl [a>&]:hover:text-white">
-                <a href='/about-me'>About Me</a>
-                <a href="/projects">Projects</a>
+            <nav className="flex gap-6 text-3xl">
+                <a href='/about-me' className="underline hover:text-white">About Me</a>
+                <a href='/projects' className="underline hover:text-white">Projects</a>
             </nav>
             <TypeAnimation
                 style={{ fontSize: '30px' }}
@@ -107,7 +106,7 @@ export default function HomePage() {
                 repeat={1}
             />
             <div className='contactsBlock'>
-                <a href='mailto:vitohin.nikitaa@gmail.com' target='_blank' rel='noreferrer'>mykyta.vitokhin@gmail.com</a>
+                <a href='mailto:mykyta.vitokhin@gmail.com' target='_blank' rel='noreferrer'>mykyta.vitokhin@gmail.com</a>
                 <a href='https://www.linkedin.com/in/mykyta-vitokhin/' target='_blank' rel='noreferrer'>linkedin.com/in/mykyta-vitokhin</a>
             </div>
             <ContactUs />
