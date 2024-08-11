@@ -168,6 +168,10 @@ body * {
   animation: scroll 3s 1;
   overflow: hidden;
   padding: 0 40px 40px;
+
+  @media (max-width: 640px) {
+    gap: 3rem;
+  }
 }
 
 .overlay {
@@ -223,6 +227,7 @@ body * {
 }
 
 .header {
+  margin-top: 20px;
   align-self: center;
   text-align: center;
   width: fit-content;
@@ -236,6 +241,12 @@ body * {
 
 .title {
   font-size: 80px;
+  line-height: 80px;
+
+  @media (max-width: 640px) {
+    font-size: 50px;
+    line-height: 48px;
+  }
 }
 
 .title b {
@@ -263,7 +274,8 @@ body * {
 .contactForm {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   gap: 12px;
 }
 

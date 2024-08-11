@@ -46,7 +46,7 @@ const ContactUs = () => {
                 <label htmlFor='message'>Message: </label>
                 <textarea required id='message' name='message' className='input h-[55px] overflow-hidden' />
             </div>
-            <div className="flex justify-between gap-8 mt-5">
+            <div className="flex justify-between gap-8 mt-5 max-sm:flex-col max-sm:gap-4">
                 <button className="border-2 text-3xl border-[#00dd00] py-[10px] px-[100px] pointer hover:bg-[#00dd00] hover:text-white" type="submit">SUBMIT</button>
                 <button className="border-2 text-3xl border-[#00dd00] py-[10px] px-[100px] pointer hover:bg-[#00dd00] hover:text-white" type="reset">RESET</button>
             </div>
@@ -78,12 +78,12 @@ export default function HomePage() {
                     </h4>
                 </div>
             </header>
-            <nav className="flex gap-6 text-3xl">
+            <nav className="flex gap-6 text-3xl max-sm:justify-center">
                 <a href='/about-me' className="underline hover:text-white">About Me</a>
                 <a href='/projects' className="underline hover:text-white">Projects</a>
             </nav>
             <TypeAnimation
-                style={{ fontSize: '30px' }}
+                style={{ fontSize: '30px', minHeight: '90px' }}
                 sequence={[
                     '> ',
                     2000,
