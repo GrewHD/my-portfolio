@@ -16,8 +16,7 @@ export default function AboutMePage() {
                     have expanded my proficiency in Vue.js, enhancing website development.
                 </p>
             </div>
-
-            <div>
+            <div className='self-start'>
                 <a href='/' className="text-3xl">&lt; <span className="underline">Back</span></a>
             </div>
         </div>
