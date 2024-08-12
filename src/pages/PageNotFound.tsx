@@ -8,6 +8,7 @@ export default function PageNotFound() {
                     <p className="text-[3rem] leading-[3rem]">Sorry, Neo...</p>
                 </div>
             </div>
+            <a href='/' className="self-center border-2 text-3xl text-center border-[#00dd00] py-[10px] px-[20px] pointer hover:bg-[#00dd00] hover:text-white w-full max-w-[350px]">Back to Home</a>
         </div>
     )
 }

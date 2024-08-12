@@ -58,19 +58,9 @@ const ContactUs = () => {
 };
 
 export default function HomePage() {
-    const asciiArt = `
-+==============================================================+
-|                                                              |
-|                        MYKYTA VITOKHIN                       |
-|                                                              |
-+==============================================================+`
-
     return (
         <div className='content'>
             <header className='header'>
-                {/* <pre className='logo'>
-                    {asciiArt}
-                </pre> */}
                 <h2 className="title">MYKYTA VITOKHIN</h2>
                 <div>
                     <h4 className='title'>
@@ -92,9 +82,7 @@ export default function HomePage() {
                     2000,
                     '> Wake up, Neo...',
                     2000,
-                    '> I make webs',
-                    200,
-                    '> I make e-commerce websites',
+                    '> I make websites',
                     1000,
                     '> I optimize website performance',
                     1000,
@@ -103,7 +91,7 @@ export default function HomePage() {
                     '> I build digital experiences',
                     1000,
                     '> I make websites.',
-                    2000,
+                    1000,
                     '> I make websites!',
                     1000,
                 ]}

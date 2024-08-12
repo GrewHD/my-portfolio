@@ -162,7 +162,7 @@ body * {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  max-width: 1024px;
+  max-width: 824px;
   width: 100%;
   position: absolute;
   animation: scroll 3s 1;
@@ -194,6 +194,10 @@ body * {
   bottom: 0;
   left: 0;
   z-index: 2;
+
+  @media (max-width: 870px) {
+    background-size: 100% 1px, 3px 100%;
+  }
 }
 
 .overlay:after {
@@ -227,10 +231,14 @@ body * {
 }
 
 .header {
-  margin-top: 20px;
+  margin-top: 80px;
   align-self: center;
   text-align: center;
   width: fit-content;
+
+  @media (max-width: 870px) {
+    margin-top: 40px;
+  }
 }
 
 .logo {
