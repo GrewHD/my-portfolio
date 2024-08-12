@@ -4,6 +4,7 @@ import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutMePage from './pages/AboutMePage';
+import PageNotFound from './pages/PageNotFound';
 
 const router = createBrowserRouter([{
   path: '/',
@@ -14,6 +15,9 @@ const router = createBrowserRouter([{
 }, {
   path: '/projects',
   element: AboutMePage(),
+}, {
+  path: '*',
+  element: PageNotFound(),
 }])
 
 function App() {
