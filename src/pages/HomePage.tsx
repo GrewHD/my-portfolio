@@ -30,7 +30,7 @@ const ContactUs = () => {
 
     return (
         <div>
-            <h4 className="text-4xl mb-4">OR CONTACT ME VIA FORM</h4>
+            <h4 className="text-4xl mb-4 max-sm:text-3xl">OR CONTACT ME VIA FORM</h4>
             <form ref={form} onSubmit={sendEmail} className='contactForm'>
                 <div className="flex items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:gap-0">
                     <label htmlFor='name'>Name: </label>
