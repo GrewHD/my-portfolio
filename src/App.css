@@ -196,12 +196,6 @@ body * {
   z-index: 2;
 }
 
-@media (max-width: 870px) {
-  .overlay:before {
-    background-size: 100% 1px, 3px 100%;
-  }
-}
-
 .overlay:after {
   animation: flicker 0.30s infinite;
   background: rgba(16, 16, 16, 0.2);
