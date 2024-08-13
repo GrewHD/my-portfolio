@@ -16,8 +16,9 @@ export default function AboutMePage() {
                     have expanded my proficiency in Vue.js, enhancing website development.
                 </p>
             </div>
-            <div className='self-start'>
-                <a href='/' className="text-3xl">&lt; <span className="underline">Back</span></a>
+            <div className='flex justify-between gap-4'>
+                <a href='/' className="text-3xl hover:text-white">&lt; <span className="underline">Home</span></a>
+                <a href='/projects' className="text-3xl hover:text-white"><span className="underline">Projects</span> &gt;</a>
             </div>
         </div>
     )
