@@ -16,7 +16,7 @@ export default function AboutMePage() {
                     have expanded my proficiency in Vue.js, enhancing website development.
                 </p>
             </div>
-            <div className='flex justify-between gap-4'>
+            <div className='flex justify-between gap-4 w-full'>
                 <a href='/' className="text-3xl hover:text-white">&lt; <span className="underline">Home</span></a>
                 <a href='/projects' className="text-3xl hover:text-white"><span className="underline">Projects</span> &gt;</a>
             </div>

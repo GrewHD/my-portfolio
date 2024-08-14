@@ -1,5 +1,3 @@
-import React, { ReactNode } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import HomePage from './pages/HomePage';
